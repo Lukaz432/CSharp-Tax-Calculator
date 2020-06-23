@@ -38,6 +38,8 @@
             this.totalOutputBox = new System.Windows.Forms.TextBox();
             this.clearBtn = new System.Windows.Forms.Button();
             this.doneBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tipOutputBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(107, 175);
+            this.label3.Location = new System.Drawing.Point(107, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 4;
@@ -88,15 +90,16 @@
             // 
             // taxOutputBox
             // 
-            this.taxOutputBox.Location = new System.Drawing.Point(208, 172);
+            this.taxOutputBox.Location = new System.Drawing.Point(208, 169);
             this.taxOutputBox.Name = "taxOutputBox";
-            this.taxOutputBox.Size = new System.Drawing.Size(68, 20);
+            this.taxOutputBox.Size = new System.Drawing.Size(56, 20);
             this.taxOutputBox.TabIndex = 5;
+            this.taxOutputBox.TextChanged += new System.EventHandler(this.taxOutputBox_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 222);
+            this.label4.Location = new System.Drawing.Point(129, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 6;
@@ -105,9 +108,9 @@
             // 
             // totalOutputBox
             // 
-            this.totalOutputBox.Location = new System.Drawing.Point(210, 219);
+            this.totalOutputBox.Location = new System.Drawing.Point(208, 223);
             this.totalOutputBox.Name = "totalOutputBox";
-            this.totalOutputBox.Size = new System.Drawing.Size(66, 20);
+            this.totalOutputBox.Size = new System.Drawing.Size(56, 20);
             this.totalOutputBox.TabIndex = 7;
             // 
             // clearBtn
@@ -130,11 +133,30 @@
             this.doneBtn.UseVisualStyleBackColor = true;
             this.doneBtn.Click += new System.EventHandler(this.doneBtn_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(139, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "15% Tip";
+            // 
+            // tipOutputBox
+            // 
+            this.tipOutputBox.Location = new System.Drawing.Point(208, 195);
+            this.tipOutputBox.Name = "tipOutputBox";
+            this.tipOutputBox.Size = new System.Drawing.Size(56, 20);
+            this.tipOutputBox.TabIndex = 11;
+            this.tipOutputBox.TextChanged += new System.EventHandler(this.tipOutputBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 316);
+            this.Controls.Add(this.tipOutputBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.doneBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.totalOutputBox);
@@ -164,6 +186,8 @@
         private System.Windows.Forms.TextBox totalOutputBox;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button doneBtn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tipOutputBox;
     }
 }
 
